@@ -6,6 +6,7 @@ public class Rotation {
     public Rotation() {
         rotationMap = new HashMap<>();
         rotationMap.put("carrot", Arrays.asList("Green bean", "Pea", "Peanut", "Chickpea", "Soy Bean"));
+        rotationMap.put("broccoli", Arrays.asList("Potato","Parsnip","tomato","carrot","lettuce"));
     }
 
 

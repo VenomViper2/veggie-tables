@@ -8,10 +8,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class VegtableRotationTest {
 
     @Test
-    void testRotationOptionsExist() {
-        List<String> rotationList;
+    void testRotationOptionsExistForCarrot() {
         Rotation rotation = new Rotation();
-        rotationList = rotation.search("carrot");
-        assertThat(rotationList).contains("Green bean", "Pea", "Peanut", "Chickpea", "Soy Bean");
+        assertThat(rotation.search("carrot")).contains("Green bean", "Pea", "Peanut", "Chickpea", "Soy Bean");
+    }
+
+    @Test
+    void testRotationOptionsExistForBroccoli(){
+        Rotation rotation = new Rotation();
+        assertThat(rotation.search("broccoli")).contains("Potato","Parsnip","tomato","carrot","lettuce");
     }
 }
