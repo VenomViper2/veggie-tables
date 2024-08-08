@@ -13,8 +13,8 @@ public class VegetableRotation {
 
 
 
-    public List<String> search(String vegetableName, String soilType) {
-        if (soilType.equals("acidic")) {
+    public List<String> search(String vegetableName, SoilType soilType) {
+        if (soilType == SoilType.ACIDIC) {
             return List.of("Potato", "Pumpkin", "Cucumber", "Chickpea", "Soy Bean");
         }
         return rotationMap.get(vegetableName);
