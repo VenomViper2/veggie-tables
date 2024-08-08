@@ -8,12 +8,19 @@ public class VegetableRotationTest {
     @Test
     void testRotationOptionsExistForCarrot() {
         VegetableRotation vegetableRotation = new VegetableRotation();
-        assertThat(vegetableRotation.search("carrot")).contains("Green bean", "Pea", "Peanut", "Chickpea", "Soy Bean");
+        assertThat(vegetableRotation.search("carrot", "standard")).contains("Green bean", "Pea", "Peanut", "Chickpea", "Soy Bean");
     }
 
     @Test
-    void testRotationOptionsExistForBroccoli(){
+    void testRotationOptionsExistForBroccoli() {
         VegetableRotation vegetableRotation = new VegetableRotation();
-        assertThat(vegetableRotation.search("broccoli")).contains("Potato","Parsnip","tomato","carrot","lettuce");
+        assertThat(vegetableRotation.search("broccoli", "standard")).contains("Potato","Parsnip","tomato","carrot","lettuce");
     }
+
+    @Test
+    void whenSoilTypeAcidicCorrectOptionsReturnedForCarrot() {
+        VegetableRotation vegetableRotation = new VegetableRotation();
+        assertThat(vegetableRotation.search("carrot", "acidic")).contains("Potato", "Pumpkin", "Cucumber", "Chickpea", "Soy Bean");
+    }
+
 }

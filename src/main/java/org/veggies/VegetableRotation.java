@@ -12,7 +12,11 @@ public class VegetableRotation {
     }
 
 
-    public List<String> search(String vegetableName) {
+
+    public List<String> search(String vegetableName, String soilType) {
+        if (soilType.equals("acidic")) {
+            return List.of("Potato", "Pumpkin", "Cucumber", "Chickpea", "Soy Bean");
+        }
         return rotationMap.get(vegetableName);
     }
 
