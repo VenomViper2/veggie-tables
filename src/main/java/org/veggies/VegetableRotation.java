@@ -1,9 +1,11 @@
+package org.veggies;
+
 import java.util.*;
 
-public class Rotation {
+public class VegetableRotation {
     Map<String,List<String>> rotationMap;
 
-    public Rotation() {
+    public VegetableRotation() {
         rotationMap = new HashMap<>();
         rotationMap.put("carrot", Arrays.asList("Green bean", "Pea", "Peanut", "Chickpea", "Soy Bean"));
         rotationMap.put("broccoli", Arrays.asList("Potato","Parsnip","tomato","carrot","lettuce"));
@@ -13,4 +15,5 @@ public class Rotation {
     public List<String> search(String vegetableName) {
         return rotationMap.get(vegetableName);
     }
+
 }

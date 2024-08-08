@@ -1,4 +1,4 @@
-package org.training;
+package org.veggies;
 
 public class Main {
     public static void main(String[] args) {
